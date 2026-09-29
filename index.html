@@ -43,6 +43,45 @@
       </section>
     </main>
 
+    <section
+      id="detail-modal"
+      class="detail-modal"
+      aria-hidden="true"
+      hidden
+    >
+      <div
+        class="detail-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="detail-title"
+      >
+        <button
+          id="close-detail"
+          class="close-detail"
+          type="button"
+          aria-label="关闭详情"
+        >
+          ×
+        </button>
+
+        <div class="card-header">
+          <span id="detail-type" class="type-tag"></span>
+          <span id="detail-status" class="status"></span>
+        </div>
+
+        <h2 id="detail-title"></h2>
+
+        <div class="detail-content">
+          <p><strong>分类：</strong><span id="detail-category"></span></p>
+          <p><strong>地点：</strong><span id="detail-location"></span></p>
+          <p><strong>日期：</strong><span id="detail-date"></span></p>
+          <p><strong>详细描述：</strong></p>
+          <p id="detail-description" class="description"></p>
+          <p><strong>联系方式：</strong><span id="detail-contact"></span></p>
+        </div>
+      </div>
+    </section>
+
     <nav class="bottom-nav">
       <button class="active">首页</button>
       <button>发布</button>
