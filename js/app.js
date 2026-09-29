@@ -11,6 +11,9 @@ const detailDate = document.getElementById("detail-date");
 const detailDescription = document.getElementById("detail-description");
 const detailContact = document.getElementById("detail-contact");
 
+const savedItems = itemStorage.loadItems(items);
+items.splice(0, items.length, ...savedItems);
+
 let lastFocusedElement = null;
 
 function isResolvedStatus(status) {
