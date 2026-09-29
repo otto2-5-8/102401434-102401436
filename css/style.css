@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f8;
+  color: #243047;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  width: min(100%, 480px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding-bottom: 72px;
+  background: #ffffff;
+}
+
+header {
+  padding: 28px 20px;
+  color: #ffffff;
+  background: #356fe5;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 25px;
+}
+
+header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+main {
+  padding: 18px;
+}
+
+.search-box {
+  display: flex;
+  gap: 8px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px;
+  border: 1px solid #ccd3df;
+  border-radius: 8px;
+}
+
+.search-box button,
+.detail-button {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #356fe5;
+}
+
+.type-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.type-tabs button {
+  flex: 1;
+  padding: 9px;
+  border: 1px solid #d4dae4;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.type-tabs .active {
+  color: #ffffff;
+  border-color: #356fe5;
+  background: #356fe5;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-row select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccd3df;
+  border-radius: 8px;
+}
+
+.item-list {
+  display: grid;
+  gap: 14px;
+}
+
+.item-card {
+  padding: 16px;
+  border: 1px solid #e0e4eb;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgb(36 48 71 / 8%);
+}
+
+.item-card h3 {
+  margin: 12px 0;
+}
+
+.item-card p {
+  margin: 6px 0;
+  color: #626d80;
+}
+
+.description {
+  padding: 10px;
+  border-radius: 8px;
+  background: #f5f7fa;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.type-tag,
+.status {
+  padding: 4px 9px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.type-tag.lost {
+  color: #b75600;
+  background: #fff0dd;
+}
+
+.type-tag.found {
+  color: #157046;
+  background: #ddf7e9;
+}
+
+.status {
+  color: #356fe5;
+  background: #e8efff;
+}
+
+.status.resolved {
+  color: #667085;
+  background: #edf0f4;
+}
+
+.detail-button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.bottom-nav {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: min(100%, 480px);
+  margin: 0 auto;
+  padding: 10px;
+  border-top: 1px solid #e0e4eb;
+  background: #ffffff;
+}
+
+.bottom-nav button {
+  flex: 1;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+}
+
+.bottom-nav .active {
+  color: #356fe5;
+  font-weight: bold;
+}
