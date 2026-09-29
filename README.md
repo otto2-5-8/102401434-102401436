@@ -17,3 +17,10 @@
 - 搜索物品
 - 查看详情及联系方式
 - 修改信息状态
+
+## 需求与原型
+
+本项目基于第一次结对作业的需求分析和原型设计进行实现。
+
+- [第一次作业GitHub仓库](https://github.com/tw1l1ghtcc/campus-lost-found)
+- [Figma交互原型](https://www.figma.com/design/tTIMlQHjhwiKaSm3qshgPh/Untitled?node-id=0-1)
