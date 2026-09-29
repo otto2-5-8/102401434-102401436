@@ -7,7 +7,8 @@ const items = [
     location: "图书馆三楼",
     date: "2026-09-28",
     status: "寻找中",
-    description: "透明卡套，背面贴有蓝色标签"
+    description: "透明卡套，背面贴有蓝色标签",
+    contact: "QQ：102401434"
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const items = [
     location: "第二食堂",
     date: "2026-09-28",
     status: "待认领",
-    description: "黑色八骨折叠伞，伞柄处有挂绳"
+    description: "黑色八骨折叠伞，伞柄处有挂绳",
+    contact: "QQ：102401436"
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const items = [
     location: "教学楼A栋",
     date: "2026-09-27",
     status: "已找到",
-    description: "白色充电盒，右侧有轻微划痕"
+    description: "白色充电盒，右侧有轻微划痕",
+    contact: "邮箱：student@example.com"
   }
 ];
