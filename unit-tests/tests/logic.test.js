@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
-const ROOT = path.join(__dirname, "..");
+const ROOT = path.join(__dirname, "..", "..");   // 指向项目根：直接测试 js/ 下的真实源码
 // 每个测试文件用独立 vm 上下文，避免同一 worker 里重复声明全局 const
 const ctx = vm.createContext({ console: console });
 vm.runInContext(fs.readFileSync(path.join(ROOT, "js/data.js"), "utf8"), ctx, { filename: "js/data.js" });

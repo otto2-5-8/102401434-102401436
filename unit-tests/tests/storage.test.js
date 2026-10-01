@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
-const ROOT = path.join(__dirname, "..");
+const ROOT = path.join(__dirname, "..", "..");   // 指向项目根：直接测试 js/ 下的真实源码
 let store = {};
 let failWrite = false;
 

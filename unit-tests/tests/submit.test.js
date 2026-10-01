@@ -12,7 +12,7 @@ const ROOT = path.join(__dirname, "..");
 const ctx = vm.createContext({ console: console });
 vm.runInContext(fs.readFileSync(path.join(ROOT, "js/data.js"), "utf8"), ctx, { filename: "js/data.js" });
 vm.runInContext(fs.readFileSync(path.join(ROOT, "js/logic.js"), "utf8"), ctx, { filename: "js/logic.js" });
-vm.runInContext(fs.readFileSync(path.join(ROOT, "js/api.js"), "utf8"), ctx, { filename: "js/api.js" });
+vm.runInContext(fs.readFileSync(path.join(__dirname, "..", "api.js"), "utf8"), ctx, { filename: "js/api.js" });
 
 const L = vm.runInContext("itemLogic", ctx);
 const api = vm.runInContext("itemApi", ctx);

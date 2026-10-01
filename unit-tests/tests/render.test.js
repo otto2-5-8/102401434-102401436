@@ -9,7 +9,7 @@ const fs = require("fs");
 const path = require("path");
 const { JSDOM, VirtualConsole } = require("jsdom");
 
-const PROJ = path.join(__dirname, "..");
+const PROJ = path.join(__dirname, "..", "..");   // 项目根：用真实 index.html 与 js/
 const SCRIPTS = ["js/data.js", "js/storage.js", "js/logic.js", "js/render.js", "js/app.js"];
 const STORAGE_KEY = "campus-lost-found-items";
 
