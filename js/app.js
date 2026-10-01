@@ -29,9 +29,15 @@
   items.splice(0, items.length, ...storedItems);
 
   function persist() {
-    if (!itemStorage.saveItems(items)) {
-      itemRender.showToast("本地保存失败：浏览器存储不可用，或图片体积超出限制");
+    const saved = itemStorage.saveItems(items);
+
+    if (!saved) {
+      itemRender.showToast(
+        "本地保存失败：浏览器存储不可用，或图片体积超出限制"
+      );
     }
+
+    return saved;
   }
 
   function findItem(itemId) {
@@ -122,7 +128,12 @@
       return;
     }
 
-    persist();
+    if (!persist()) {
+      result.item.status = result.from;
+      refreshAll();
+      return;
+    }
+
     refreshAll();
     itemRender.showToast("已标记为「" + result.to + "」，首页与搜索结果会同步显示");
   }
@@ -199,7 +210,12 @@
     const newItem = itemLogic.createItem(values, items);
     items.push(newItem);
 
-    persist();
+    if (!persist()) {
+      items.pop();
+      refreshAll();
+      return;
+    }
+
     refreshAll();
 
     state.publishCompleted = true;
